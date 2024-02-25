@@ -71,7 +71,7 @@ struct ListFeatureView: View {
         NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             ScrollView {
                 LazyVStack {
-                    ForEach(Array(store.scope(state: \.rows, action: \.rows))) { rowStore in
+                    ForEach(store.scope(state: \.rows, action: \.rows)) { rowStore in
                         RowView(store: rowStore)
                     }
                 }
