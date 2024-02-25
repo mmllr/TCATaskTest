@@ -22,7 +22,7 @@ struct ListClient {
 }
 
 extension ListClient: DependencyKey {
-    static let facts: [String] = ["1+1=2", "42", "Gras is green", "Water is wet"]
+    static let facts: [String] = ["1+1=2", "42", "Grass is green", "Water is wet"]
     static var liveValue: Self = {
         let values = LockIsolated<[Item]>([])
 
